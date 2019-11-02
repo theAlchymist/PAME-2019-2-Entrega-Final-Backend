@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from api.models import *
 
 class UserSerializer(serializers.ModelSerializer):
   class Meta:
@@ -16,3 +17,8 @@ class UserSerializer(serializers.ModelSerializer):
     user.save()
     Token.objects.create(user=user)
     return user
+
+class EventoSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Evento
+    fields  = '__all__'
