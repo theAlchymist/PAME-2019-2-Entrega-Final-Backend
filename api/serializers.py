@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
 from api.models import *
 
 class UserSerializer(serializers.ModelSerializer):
@@ -21,4 +20,9 @@ class UserSerializer(serializers.ModelSerializer):
 class EventoSerializer(serializers.ModelSerializer):
   class Meta:
     model = Evento
+    fields  = '__all__'
+
+class FuncionarioSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Funcionario
     fields  = '__all__'
