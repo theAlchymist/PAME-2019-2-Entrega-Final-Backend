@@ -26,3 +26,8 @@ class FuncionarioSerializer(serializers.ModelSerializer):
   class Meta:
     model = Funcionario
     fields  = '__all__'
+
+class TransacaoSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Transacao
+    fields  = '__all__'
